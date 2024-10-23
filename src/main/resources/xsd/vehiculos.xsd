@@ -1,0 +1,94 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.sanca.p2.efdsw/ws/objects"
+           targetNamespace="http://www.sanca.p2.efdsw/ws/objects"
+           elementFormDefault="qualified">
+
+    <!-- Solicitud para buscar vehículo por ID -->
+    <xs:element name="getVehiculoByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuesta para buscar vehículo por ID -->
+    <xs:element name="getVehiculoByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" type="tns:vehiculows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Solicitud para obtener todos los vehículos -->
+    <xs:element name="getAllVehiculosRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuesta para devolver todos los vehículos -->
+    <xs:element name="getAllVehiculosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" type="tns:vehiculows" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Solicitud para crear un vehículo -->
+    <xs:element name="createVehiculoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modelovehiculo" type="xs:string"/>
+                <xs:element name="anioovehiculo" type="xs:int"/>
+                <xs:element name="marcavehiculo" type="xs:string"/>
+                <xs:element name="preciovehiculo" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuesta para crear un vehículo -->
+    <xs:element name="createVehiculoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" type="tns:vehiculows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Solicitud para actualizar un vehículo -->
+    <xs:element name="updateVehiculoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idvehiculo" type="xs:int"/>
+                <xs:element name="modelovehiculo" type="xs:string"/>
+                <xs:element name="anioovehiculo" type="xs:int"/>
+                <xs:element name="marcavehiculo" type="xs:string"/>
+                <xs:element name="preciovehiculo" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuesta para actualizar un vehículo -->
+    <xs:element name="updateVehiculoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" type="tns:vehiculows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del tipo complejo para "Vehiculo" -->
+    <xs:complexType name="vehiculows">
+        <xs:sequence>
+            <xs:element name="idvehiculo" type="xs:int"/>
+            <xs:element name="modelovehiculo" type="xs:string"/>
+            <xs:element name="anioovehiculo" type="xs:int"/>
+            <xs:element name="marcavehiculo" type="xs:string"/>
+            <xs:element name="preciovehiculo" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

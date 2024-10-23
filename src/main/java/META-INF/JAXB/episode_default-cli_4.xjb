@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.10.22 a las 11:24:30 PM PET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.sanca.p2.efdsw/ws/objects">
+    <schemaBindings map="false">
+      <package name="efdsw.p2.sanca.ws.objects"/>
+    </schemaBindings>
+    <bindings scd="tns:getClienteByIdRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.GetClienteByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getClienteByIdResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetClienteByIdResponse"/>
+    </bindings>
+    <bindings scd="~tns:clientews">
+      <class ref="efdsw.p2.sanca.ws.objects.Clientews"/>
+    </bindings>
+    <bindings scd="tns:getAllClientesResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetAllClientesResponse"/>
+    </bindings>
+    <bindings scd="tns:createClienteRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.CreateClienteRequest"/>
+    </bindings>
+    <bindings scd="tns:updateClienteRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.UpdateClienteRequest"/>
+    </bindings>
+    <bindings scd="tns:getEmpleadoByIdRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.GetEmpleadoByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getEmpleadoByIdResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetEmpleadoByIdResponse"/>
+    </bindings>
+    <bindings scd="~tns:empleadows">
+      <class ref="efdsw.p2.sanca.ws.objects.Empleadows"/>
+    </bindings>
+    <bindings scd="tns:getAllEmpleadosResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetAllEmpleadosResponse"/>
+    </bindings>
+    <bindings scd="tns:createEmpleadoRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.CreateEmpleadoRequest"/>
+    </bindings>
+    <bindings scd="tns:updateEmpleadoRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.UpdateEmpleadoRequest"/>
+    </bindings>
+    <bindings scd="tns:getVehiculoByIdRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.GetVehiculoByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getVehiculoByIdResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetVehiculoByIdResponse"/>
+    </bindings>
+    <bindings scd="~tns:vehiculows">
+      <class ref="efdsw.p2.sanca.ws.objects.Vehiculows"/>
+    </bindings>
+    <bindings scd="tns:getAllVehiculosResponse">
+      <class ref="efdsw.p2.sanca.ws.objects.GetAllVehiculosResponse"/>
+    </bindings>
+    <bindings scd="tns:createVehiculoRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.CreateVehiculoRequest"/>
+    </bindings>
+    <bindings scd="tns:updateVehiculoRequest">
+      <class ref="efdsw.p2.sanca.ws.objects.UpdateVehiculoRequest"/>
+    </bindings>
+  </bindings>
+</bindings>
+

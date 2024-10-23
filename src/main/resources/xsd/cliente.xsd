@@ -1,0 +1,97 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.sanca.p2.efdsw/ws/objects"
+           targetNamespace="http://www.sanca.p2.efdsw/ws/objects"
+           elementFormDefault="qualified">
+
+        <!-- Solicitud para buscar cliente por ID -->
+        <xs:element name="getClienteByIdRequest">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="id" type="xs:int" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Respuesta para buscar cliente por ID -->
+        <xs:element name="getClienteByIdResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="cliente" type="tns:clientews"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Solicitud para obtener todos los clientes -->
+        <xs:element name="getAllClientesRequest">
+            <xs:complexType>
+                <xs:sequence/>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Respuesta para devolver todos los clientes -->
+        <xs:element name="getAllClientesResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="clientes" type="tns:clientews" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Solicitud para crear un cliente -->
+        <xs:element name="createClienteRequest">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="nombrecliente" type="xs:string"/>
+                    <xs:element name="apellidocliente" type="xs:string"/>
+                    <xs:element name="emailcliente" type="xs:string"/>
+                    <xs:element name="telefonocliente" type="xs:string"/>
+                    <xs:element name="direccioncliente" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Respuesta para crear un cliente-->
+        <xs:element name="createClienteResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="cliente" type="tns:clientews"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Solicitud para actualizar un cliente -->
+        <xs:element name="updateClienteRequest">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="idcliente" type="xs:int"/>
+                    <xs:element name="nombrecliente" type="xs:string"/>
+                    <xs:element name="apellidocliente" type="xs:string"/>
+                    <xs:element name="emailcliente" type="xs:string"/>
+                    <xs:element name="telefonocliente" type="xs:string"/>
+                    <xs:element name="direccioncliente" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Respuesta para actualizar un cliente -->
+        <xs:element name="updateClienteResponse">
+            <xs:complexType>
+                <xs:sequence>
+                     <xs:element name="cliente" type="tns:clientews"/>
+                 </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del tipo complejo para "Cliente" -->
+        <xs:complexType name="clientews">
+            <xs:sequence>
+                <xs:element name="idcliente" type="xs:int"/>
+                <xs:element name="nombrecliente" type="xs:string"/>
+                <xs:element name="apellidocliente" type="xs:string"/>
+                <xs:element name="emailcliente" type="xs:string"/>
+                <xs:element name="telefonocliente" type="xs:string"/>
+                <xs:element name="direccioncliente" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:schema>
